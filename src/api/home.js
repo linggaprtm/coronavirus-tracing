@@ -10,5 +10,5 @@ export async function getHomes(params){
         formBody.push(encodedKey + "=" + encodedValue);
     }
     formBody = formBody.join("&");
-    return await axios.get( `${config.api_host}indonesia`);
+    return await axios.get( `${config.api_host}indonesia`, {headers:{'Access-Control-Allow-Origin': '*'}});
 }
